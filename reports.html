@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports - DevSecOps</title>
+
+    <link rel="stylesheet" href="css/reports.css">
+
+</head>
+
+<body>
+
+
+    <div class="reports-container">
+
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <h2>🔒 DevSecOps</h2>
+
+            </div>
+
+
+            <ul class="menu">
+
+                <li>
+                    <a href="dashboard.html">🏠 Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="pipelines.html">🔄 Pipelines</a>
+                </li>
+
+                <li>
+                    <a href="vulnerabilities.html">🛡️ Security</a>
+                </li>
+
+                <li>
+                    <a href="ai-analysis.html">🤖 AI Analysis</a>
+                </li>
+
+                <li>
+                    <a href="monitoring.html">☁️ Monitoring</a>
+                </li>
+
+                <li class="active">
+                    📊 Reports
+                </li>
+
+                <li>
+                    <a href="settings.html">
+                        ⚙️ Settings
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <a href="#" class="logout" id="logoutBtn">
+                🚪 Logout
+            </a>
+
+        </aside>
+
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>📊 Security Reports</h1>
+
+                    <p>
+                        View and download your DevSecOps reports
+                    </p>
+
+                </div>
+
+                <button id="generateReport">
+
+                    + Generate Report
+
+                </button>
+
+            </div>
+
+
+            <!-- Report Cards -->
+
+            <section class="report-cards">
+
+
+                <div class="report-card">
+
+                    <div class="report-icon">
+                        🛡️
+                    </div>
+
+                    <div>
+
+                        <h3>Security Report</h3>
+
+                        <p>
+                            Vulnerabilities and security analysis
+                        </p>
+
+                    </div>
+
+                    <button class="downloadBtn">
+                        Download
+                    </button>
+
+                </div>
+
+
+                <div class="report-card">
+
+                    <div class="report-icon">
+                        🔄
+                    </div>
+
+                    <div>
+
+                        <h3>Pipeline Report</h3>
+
+                        <p>
+                            CI/CD build and deployment status
+                        </p>
+
+                    </div>
+
+                    <button class="downloadBtn">
+                        Download
+                    </button>
+
+                </div>
+
+
+                <div class="report-card">
+
+                    <div class="report-icon">
+                        ☁️
+                    </div>
+
+                    <div>
+
+                        <h3>Cloud Report</h3>
+
+                        <p>
+                            Cloud server and resource monitoring
+                        </p>
+
+                    </div>
+
+                    <button class="downloadBtn">
+                        Download
+                    </button>
+
+                </div>
+
+
+                <div class="report-card">
+
+                    <div class="report-icon">
+                        🤖
+                    </div>
+
+                    <div>
+
+                        <h3>AI Analysis Report</h3>
+
+                        <p>
+                            AI-powered security recommendations
+                        </p>
+
+                    </div>
+
+                    <button class="downloadBtn">
+                        Download
+                    </button>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- Recent Reports -->
+
+            <section class="recent-reports">
+
+                <h2>Recent Reports</h2>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Report Name</th>
+
+                                <th>Type</th>
+
+                                <th>Date</th>
+
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>Security Scan Report</td>
+
+                                <td>Security</td>
+
+                                <td>Today</td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>Pipeline #102 Report</td>
+
+                                <td>Pipeline</td>
+
+                                <td>Today</td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>Cloud Monitoring Report</td>
+
+                                <td>Cloud</td>
+
+                                <td>Yesterday</td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- AI ANALYSIS -->
+
+                            <tr>
+
+                                <td>AI Security Analysis</td>
+
+                                <td>AI</td>
+
+                                <td>Today</td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="js/reports.js"></script>
+
+</body>
+
+</html>

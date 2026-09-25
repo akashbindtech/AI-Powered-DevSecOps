@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - AI DevSecOps</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <h2>🔒 DevSecOps</h2>
+            </div>
+
+            <ul class="menu">
+
+                <li class="active">
+                    🏠 Dashboard
+                </li>
+
+                <li>
+                    <a href="pipelines.html">🔄 Pipelines</a>
+                </li>
+
+                <li>
+                    <a href="vulnerabilities.html">
+                        🛡️ Security
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ai-analysis.html">
+                        🤖 AI Analysis
+                    </a>
+                </li>
+
+                <li>
+                    <a href="monitoring.html">
+                        ☁️ Monitoring
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        📊 Reports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settings.html">
+                        ⚙️ Settings
+                    </a>
+                </li>
+
+            </ul>
+
+            <a href="#" class="logout" id="logoutBtn">
+                🚪 Logout
+            </a>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <div class="topbar">
+
+                <div>
+
+                    <h1>
+                        Welcome, <span id="userName">User</span> 👋
+                    </h1>
+
+                    <p>Welcome to AI-Powered DevSecOps</p>
+
+                </div>
+
+                <div class="profile">
+
+                    🔔
+
+                    <span>👤 Admin</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- DASHBOARD CARDS -->
+
+            <section class="cards">
+
+                <div class="dashboard-card">
+
+                    <h3>Security Score</h3>
+
+                    <h2 class="score" id="securityScore">
+                        --/100
+                    </h2>
+
+                    <p id="securityStatus">
+                        Loading...
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <h3>Critical Issues</h3>
+
+                    <h2 class="critical" id="criticalIssues">
+                        0
+                    </h2>
+
+                    <p>Needs Attention</p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <h3>High Issues</h3>
+
+                    <h2 class="high" id="highIssues">
+                        0
+                    </h2>
+
+                    <p>Review Required</p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <h3>Pipeline Status</h3>
+
+                    <h2 id="pipelineStatus">
+                        Loading...
+                    </h2>
+
+                    <p id="pipelineMessage">
+                        Checking latest build...
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- SECURITY OVERVIEW -->
+
+            <section class="content-box">
+
+                <h2>Security Overview</h2>
+
+                <div class="progress-container">
+
+                    <div class="progress-bar">
+
+                        <div class="progress" id="securityProgress">
+                            0%
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RECENT ACTIVITY -->
+
+            <section class="content-box">
+
+                <h2>Recent Activity</h2>
+
+                <div id="recentActivity">
+
+                    <div class="activity">
+
+                        <span>⏳</span>
+
+                        Loading recent activity...
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

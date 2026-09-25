@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Security Vulnerabilities - DevSecOps</title>
+
+    <link rel="stylesheet" href="css/vulnerabilities.css">
+
+</head>
+
+<body>
+
+
+    <div class="vulnerability-container">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <h2>🔒 DevSecOps</h2>
+
+            </div>
+
+
+            <ul class="menu">
+
+                <li>
+                    <a href="dashboard.html">🏠 Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="pipelines.html">🔄 Pipelines</a>
+                </li>
+
+                <li class="active">
+                    🛡️ Security
+                </li>
+
+                <li>
+                    <a href="ai-analysis.html">
+                        🤖 AI Analysis
+                    </a>
+                </li>
+
+                <li>
+                    <a href="monitoring.html">
+                        ☁️ Monitoring
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        📊 Reports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settings.html">
+                        ⚙️ Settings
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <a href="index.html" class="logout">
+                🚪 Logout
+            </a>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>Security Vulnerabilities</h1>
+
+                    <p>
+                        Monitor and manage security issues
+                    </p>
+
+                </div>
+
+                <!-- ADD VULNERABILITY BUTTON -->
+
+                <button id="addVulnerabilityBtn" class="add-vulnerability-btn">
+
+                    ➕ Add Vulnerability
+
+                </button>
+
+            </div>
+
+
+            <!-- ADD VULNERABILITY FORM -->
+
+            <div id="addVulnerabilityBox" class="add-vulnerability-box" style="display: none;">
+
+                <h2>➕ Add Vulnerability</h2>
+
+
+                <input type="text" id="vulnProject" placeholder="Project Name">
+
+
+                <input type="text" id="vulnName" placeholder="Vulnerability Name">
+
+
+                <select id="vulnSeverity">
+
+                    <option value="Critical">
+                        Critical
+                    </option>
+
+                    <option value="High" selected>
+                        High
+                    </option>
+
+                    <option value="Medium">
+                        Medium
+                    </option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                </select>
+
+
+                <input type="text" id="vulnFile" placeholder="File name e.g. login.js">
+
+
+                <textarea id="vulnDescription" placeholder="Vulnerability description">
+                </textarea>
+
+
+                <button id="saveVulnerabilityBtn">
+
+                    💾 Save Vulnerability
+
+                </button>
+
+            </div>
+
+
+            <!-- SECURITY CARDS -->
+
+            <section class="security-cards">
+
+
+                <div class="security-card critical-card">
+
+                    <p>Critical Issues</p>
+
+                    <h2 id="criticalCount">
+                        0
+                    </h2>
+
+                </div>
+
+
+                <div class="security-card high-card">
+
+                    <p>High Issues</p>
+
+                    <h2 id="highCount">
+                        0
+                    </h2>
+
+                </div>
+
+
+                <div class="security-card medium-card">
+
+                    <p>Medium Issues</p>
+
+                    <h2 id="mediumCount">
+                        0
+                    </h2>
+
+                </div>
+
+
+                <div class="security-card low-card">
+
+                    <p>Low Issues</p>
+
+                    <h2 id="lowCount">
+                        0
+                    </h2>
+
+                </div>
+
+
+                <!-- SECURITY SCORE -->
+
+                <div class="security-card score-card">
+
+                    <p>Security Score</p>
+
+                    <h2 id="securityScore">
+                        100 / 100
+                    </h2>
+
+                    <span id="securityLevel">
+                        Loading...
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- SEARCH AND FILTER -->
+
+            <section class="filter-section">
+
+                <input type="text" id="searchInput" placeholder="Search vulnerability...">
+
+
+                <select id="severityFilter">
+
+                    <option value="all">
+                        All Severity
+                    </option>
+
+                    <option value="critical">
+                        Critical
+                    </option>
+
+                    <option value="high">
+                        High
+                    </option>
+
+                    <option value="medium">
+                        Medium
+                    </option>
+
+                    <option value="low">
+                        Low
+                    </option>
+
+                </select>
+
+            </section>
+
+
+            <!-- VULNERABILITY TABLE -->
+
+            <section class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Vulnerability</th>
+
+                            <th>Severity</th>
+
+                            <th>Status</th>
+
+                            <th>Project</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="vulnerabilityTable">
+
+                        <tr>
+
+                            <td colspan="5">
+
+                                Loading vulnerabilities...
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="js/vulnerabilities.js"></script>
+
+
+</body>
+
+</html>

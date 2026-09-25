@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cloud Monitoring - DevSecOps</title>
+
+    <link rel="stylesheet" href="css/monitoring.css">
+
+</head>
+
+<body>
+
+    <div class="monitoring-container">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <h2>🔒 DevSecOps</h2>
+            </div>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="dashboard.html">🏠 Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="pipelines.html">🔄 Pipelines</a>
+                </li>
+
+                <li>
+                    <a href="vulnerabilities.html">🛡️ Security</a>
+                </li>
+
+                <li>
+                    <a href="ai-analysis.html">🤖 AI Analysis</a>
+                </li>
+
+                <li class="active">
+                    ☁️ Monitoring
+                </li>
+
+                <li>
+                    <a href="reports.html">📊 Reports</a>
+                </li>
+
+                <li>
+                    <a href="settings.html">⚙️ Settings</a>
+                </li>
+
+            </ul>
+
+            <a href="#" class="logout" id="logoutBtn">
+                🚪 Logout
+            </a>
+
+        </aside>
+
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+            <!-- Header -->
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>☁️ Cloud Security Monitoring</h1>
+
+                    <p>
+                        Monitor your cloud infrastructure and security status
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <button id="addServiceBtn">
+                        ➕ Add Service
+                    </button>
+
+                    <button id="refreshBtn">
+                        🔄 Refresh Data
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Add Service Form -->
+
+            <section class="content-box" id="addServiceBox" style="display: none;">
+
+                <h2>➕ Add Monitoring Service</h2>
+
+                <div class="usage">
+
+                    <p>Service Name</p>
+
+                    <input type="text" id="serviceName" placeholder="Example: DevSecOps Cloud Server">
+
+                </div>
+
+
+                <div class="usage">
+
+                    <p>Status</p>
+
+                    <select id="serviceStatus">
+
+                        <option value="Online">
+                            Online
+                        </option>
+
+                        <option value="Warning">
+                            Warning
+                        </option>
+
+                        <option value="Offline">
+                            Offline
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="usage">
+
+                    <p>Uptime (%)</p>
+
+                    <input type="number" id="serviceUptime" value="99.9" min="0" max="100">
+
+                </div>
+
+
+                <div class="usage">
+
+                    <p>Response Time (ms)</p>
+
+                    <input type="number" id="serviceResponseTime" value="120" min="0">
+
+                </div>
+
+
+                <button id="saveServiceBtn">
+                    💾 Save Service
+                </button>
+
+            </section>
+
+
+            <!-- Monitoring Cards -->
+
+            <section class="monitoring-cards">
+
+                <div class="monitor-card">
+
+                    <h3>🖥️ CPU Usage</h3>
+
+                    <h2 id="cpu">45%</h2>
+
+                    <p>Current Server Usage</p>
+
+                </div>
+
+
+                <div class="monitor-card">
+
+                    <h3>💾 Memory Usage</h3>
+
+                    <h2 id="memory">62%</h2>
+
+                    <p>Current Memory Usage</p>
+
+                </div>
+
+
+                <div class="monitor-card">
+
+                    <h3>📁 Disk Usage</h3>
+
+                    <h2 id="disk">38%</h2>
+
+                    <p>Storage Usage</p>
+
+                </div>
+
+
+                <div class="monitor-card">
+
+                    <h3>🟢 Server Status</h3>
+
+                    <h2 id="serverStatus">
+                        Healthy
+                    </h2>
+
+                    <p>Cloud Server Running</p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Resource Usage -->
+
+            <section class="content-box">
+
+                <h2>📊 Resource Usage</h2>
+
+
+                <div class="usage">
+
+                    <p>CPU Usage</p>
+
+                    <div class="progress-bar">
+
+                        <div class="progress cpu-progress" id="cpuBar" style="width: 45%;"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="usage">
+
+                    <p>Memory Usage</p>
+
+                    <div class="progress-bar">
+
+                        <div class="progress memory-progress" id="memoryBar" style="width: 62%;"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="usage">
+
+                    <p>Disk Usage</p>
+
+                    <div class="progress-bar">
+
+                        <div class="progress disk-progress" id="diskBar" style="width: 38%;"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Monitoring Services -->
+
+            <section class="content-box">
+
+                <h2>☁️ Monitoring Services</h2>
+
+                <div id="monitoringList">
+
+                    <p>
+                        Loading monitoring services...
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Security Alerts -->
+
+            <section class="content-box">
+
+                <h2>🚨 Recent Security Alerts</h2>
+
+
+                <div class="alert high-alert">
+
+                    <span>⚠️</span>
+
+                    <div>
+
+                        <h3>High CPU Usage Detected</h3>
+
+                        <p>
+                            Server CPU usage exceeded normal threshold.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="alert warning-alert">
+
+                    <span>🛡️</span>
+
+                    <div>
+
+                        <h3>Suspicious Login Attempt</h3>
+
+                        <p>
+                            Multiple failed login attempts detected.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="alert success-alert">
+
+                    <span>✅</span>
+
+                    <div>
+
+                        <h3>Security Scan Completed</h3>
+
+                        <p>
+                            Cloud infrastructure security scan completed successfully.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/monitoring.js"></script>
+
+</body>
+
+</html>

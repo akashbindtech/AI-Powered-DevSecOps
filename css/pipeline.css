@@ -1,0 +1,390 @@
+/* ================================
+   GLOBAL RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.pipeline-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background: #0f172a;
+}
+
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    min-height: 100vh;
+    background: #111827;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    margin-bottom: 40px;
+}
+
+.sidebar-logo h2 {
+    color: #38bdf8;
+}
+
+
+/* ================================
+   MENU
+================================ */
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #cbd5e1;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.menu li:hover {
+    background: #1e293b;
+}
+
+.menu .active {
+    background: #38bdf8;
+    color: black;
+}
+
+
+/* ================================
+   LOGOUT
+================================ */
+
+.logout {
+    margin-top: auto;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    background: #1e293b;
+    border-radius: 6px;
+    display: block;
+}
+
+.logout:hover {
+    background: #334155;
+}
+
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 30px;
+    background: #0f172a;
+}
+
+
+/* ================================
+   PAGE HEADER
+================================ */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    margin-bottom: 5px;
+}
+
+.page-header p {
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+
+/* ================================
+   RUN PIPELINE BUTTON
+================================ */
+
+#runPipeline {
+    background: #38bdf8;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#runPipeline:hover {
+    background: white;
+}
+
+
+/* ================================
+   PIPELINE INFO CARDS
+================================ */
+
+.pipeline-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.info-card p {
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+.info-card h2 {
+    color: white;
+}
+
+.passed {
+    color: #22c55e;
+}
+
+
+/* ================================
+   PIPELINE BOX
+================================ */
+
+.pipeline-box {
+    width: 100%;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.pipeline-box h2 {
+    margin-bottom: 25px;
+}
+
+
+/* ================================
+   PIPELINE STEPS
+================================ */
+
+.pipeline-step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: #334155;
+    border-radius: 8px;
+}
+
+.pipeline-step:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ================================
+   STEP ICON
+================================ */
+
+.step-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+
+/* ================================
+   STEP CONTENT
+================================ */
+
+.pipeline-step div:nth-child(2) {
+    flex: 1;
+    min-width: 0;
+}
+
+.pipeline-step h3 {
+    color: white;
+}
+
+.pipeline-step p {
+    color: #cbd5e1;
+    margin-top: 7px;
+}
+
+
+/* ================================
+   STATUS
+================================ */
+
+.status {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.status.passed {
+    background: #14532d;
+    color: #86efac;
+}
+
+.status.warning {
+    background: #78350f;
+    color: #fde68a;
+}
+
+
+/* ================================
+   TABLET RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+
+    .pipeline-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    .pipeline-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+        min-height: auto;
+    }
+
+    .sidebar-logo {
+        margin-bottom: 20px;
+    }
+
+    .menu li {
+        margin-bottom: 5px;
+    }
+
+    .logout {
+        margin-top: 20px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    #runPipeline {
+        width: 100%;
+    }
+
+    .pipeline-info {
+        grid-template-columns: 1fr;
+    }
+
+    .pipeline-step {
+        flex-wrap: wrap;
+    }
+
+    .status {
+        margin-left: 65px;
+    }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .pipeline-box {
+        padding: 15px;
+    }
+
+    .pipeline-step {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .step-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+
+    .status {
+        margin-left: 52px;
+    }
+
+}

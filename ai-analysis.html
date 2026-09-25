@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Security Analysis - DevSecOps</title>
+
+    <link rel="stylesheet" href="css/ai-analysis.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="ai-container">
+
+
+        <!-- ==============================
+             SIDEBAR
+        =============================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <h2>
+                    🔒 DevSecOps
+                </h2>
+
+            </div>
+
+
+            <ul class="menu">
+
+                <li>
+
+                    <a href="dashboard.html">
+                        🏠 Dashboard
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="pipelines.html">
+                        🔄 Pipelines
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="vulnerabilities.html">
+                        🛡️ Security
+                    </a>
+
+                </li>
+
+
+                <li class="active">
+
+                    🤖 AI Analysis
+
+                </li>
+
+
+                <li>
+
+                    <a href="monitoring.html">
+                        ☁️ Monitoring
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="reports.html">
+                        📊 Reports
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="settings.html">
+                        ⚙️ Settings
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <a href="#" class="logout" id="logoutBtn">
+
+                🚪 Logout
+
+            </a>
+
+        </aside>
+
+
+
+        <!-- ==============================
+             MAIN CONTENT
+        =============================== -->
+
+        <main class="main-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        🤖 AI Security Analysis
+                    </h1>
+
+                    <p>
+                        AI-powered vulnerability analysis
+                        and recommendations
+                    </p>
+
+                </div>
+
+
+                <button id="analyzeBtn">
+
+                    🤖 Run AI Analysis
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ==============================
+                 RISK SECTION
+            =============================== -->
+
+            <section class="risk-section">
+
+
+                <!-- RISK SCORE -->
+
+                <div class="risk-card">
+
+                    <h3>
+                        AI Security Risk Score
+                    </h3>
+
+
+                    <div class="score-circle">
+
+                        <span id="riskScore">
+                            100
+                        </span>
+
+                        <small>
+                            /100
+                        </small>
+
+                    </div>
+
+
+                    <p id="riskLevel">
+                        🟢 Good
+                    </p>
+
+                </div>
+
+
+
+                <!-- SUMMARY -->
+
+                <div class="summary-card">
+
+                    <h3>
+                        AI Security Summary
+                    </h3>
+
+
+                    <p id="aiSummary">
+
+                        Click "Run AI Analysis" to
+                        analyze your security vulnerabilities.
+
+                    </p>
+
+
+                    <div class="summary-list">
+
+
+                        <p>
+
+                            🚨 Critical Issues:
+
+                            <b id="criticalIssues">
+                                0
+                            </b>
+
+                        </p>
+
+
+                        <p>
+
+                            ⚠ High Issues:
+
+                            <b id="highIssues">
+                                0
+                            </b>
+
+                        </p>
+
+
+                        <p>
+
+                            🟡 Medium Issues:
+
+                            <b id="mediumIssues">
+                                0
+                            </b>
+
+                        </p>
+
+
+                        <p>
+
+                            🔵 Low Issues:
+
+                            <b id="lowIssues">
+                                0
+                            </b>
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==============================
+                 DETECTED ISSUE
+            =============================== -->
+
+            <section class="analysis-box">
+
+                <h2>
+                    🔍 AI Detected Security Issue
+                </h2>
+
+
+                <div class="issue-card" id="issueCard">
+
+                    <h3 id="issueTitle">
+
+                        No analysis performed yet
+
+                    </h3>
+
+
+                    <span class="severity" id="issueSeverity">
+
+                        -
+
+                    </span>
+
+
+                    <p id="issueDescription">
+
+                        Click the
+                        <b>Run AI Analysis</b>
+                        button to analyze vulnerabilities.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==============================
+                 AI EXPLANATION
+            =============================== -->
+
+            <section class="analysis-box">
+
+                <h2>
+                    🤖 AI Explanation
+                </h2>
+
+
+                <p id="aiExplanation">
+
+                    AI analysis results will appear here.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- ==============================
+                 RECOMMENDATION
+            =============================== -->
+
+            <section class="analysis-box recommendation">
+
+                <h2>
+                    💡 AI Recommended Fix
+                </h2>
+
+
+                <ul id="recommendationList">
+
+                    <li>
+                        Run AI Analysis to get
+                        security recommendations.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <script src="js/ai-analysis.js"></script>
+
+
+</body>
+
+</html>

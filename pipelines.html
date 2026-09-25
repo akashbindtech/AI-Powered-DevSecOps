@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CI/CD Pipelines - DevSecOps</title>
+
+    <link rel="stylesheet" href="css/pipeline.css">
+</head>
+
+<body>
+
+    <div class="pipeline-container">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <h2>🔒 DevSecOps</h2>
+            </div>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="dashboard.html">🏠 Dashboard</a>
+                </li>
+
+                <li class="active">
+                    🔄 Pipelines
+                </li>
+
+                <li>
+                    <a href="vulnerabilities.html">
+                        🛡️ Security
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ai-analysis.html">
+                        🤖 AI Analysis
+                    </a>
+                </li>
+
+                <li>
+                    <a href="monitoring.html">
+                        ☁️ Monitoring
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        📊 Reports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settings.html">
+                        ⚙️ Settings
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <a href="#" class="logout" id="logoutBtn">
+                🚪 Logout
+            </a>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>CI/CD Pipelines</h1>
+
+                    <p>
+                        Monitor your secure deployment pipeline
+                    </p>
+
+                </div>
+
+
+                <button id="runPipeline">
+                    ▶ Run Pipeline
+                </button>
+
+            </div>
+
+
+
+            <!-- PIPELINE INFO -->
+
+            <section class="pipeline-info">
+
+                <div class="info-card">
+
+                    <p>Pipeline ID</p>
+
+                    <h2 id="pipelineId">
+                        --
+                    </h2>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <p>Branch</p>
+
+                    <h2 id="pipelineBranch">
+                        --
+                    </h2>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <p>Commit</p>
+
+                    <h2 id="pipelineCommit">
+                        --
+                    </h2>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <p>Status</p>
+
+                    <h2 id="pipelineStatus">
+                        --
+                    </h2>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- BACKEND PIPELINES -->
+
+            <section class="pipeline-box">
+
+                <h2>My Pipelines</h2>
+
+
+                <!-- JavaScript yahan pipelines show karega -->
+
+                <div id="pipelineList">
+
+                    <p>
+                        Loading pipelines...
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- PIPELINE STEPS -->
+
+            <section class="pipeline-box">
+
+                <h2>Pipeline Steps</h2>
+
+
+                <div class="pipeline-step">
+
+                    <div class="step-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            1. Code Checkout
+                        </h3>
+
+                        <p>
+                            Source code downloaded successfully
+                        </p>
+
+                    </div>
+
+                    <span class="status passed">
+                        Passed
+                    </span>
+
+                </div>
+
+
+
+                <div class="pipeline-step">
+
+                    <div class="step-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            2. Build Application
+                        </h3>
+
+                        <p>
+                            Application build completed
+                        </p>
+
+                    </div>
+
+                    <span class="status passed">
+                        Passed
+                    </span>
+
+                </div>
+
+
+
+                <div class="pipeline-step">
+
+                    <div class="step-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            3. Unit Testing
+                        </h3>
+
+                        <p>
+                            All tests passed successfully
+                        </p>
+
+                    </div>
+
+                    <span class="status passed">
+                        Passed
+                    </span>
+
+                </div>
+
+
+
+                <div class="pipeline-step">
+
+                    <div class="step-icon">
+                        🛡️
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            4. Security Scan
+                        </h3>
+
+                        <p>
+                            2 vulnerabilities detected
+                        </p>
+
+                    </div>
+
+                    <span class="status warning">
+                        Warning
+                    </span>
+
+                </div>
+
+
+
+                <div class="pipeline-step">
+
+                    <div class="step-icon">
+                        🐳
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            5. Docker Scan
+                        </h3>
+
+                        <p>
+                            Container security verified
+                        </p>
+
+                    </div>
+
+                    <span class="status passed">
+                        Passed
+                    </span>
+
+                </div>
+
+
+
+                <div class="pipeline-step">
+
+                    <div class="step-icon">
+                        🚀
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            6. Deployment
+                        </h3>
+
+                        <p>
+                            Application deployed successfully
+                        </p>
+
+                    </div>
+
+                    <span class="status passed">
+                        Passed
+                    </span>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- PIPELINE JAVASCRIPT -->
+
+    <script src="js/pipeline.js"></script>
+
+
+</body>
+
+</html>
